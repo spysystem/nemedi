@@ -2,8 +2,9 @@
 
 namespace NemEDI;
 
-class SuperEDIXWebService extends \SoapClient
+class NemEDIWebService extends \SoapClient
 {
+	const	WSDLUrl = 'http://web.nemedi.dk/webediservice/superEDIXWebService.asmx?WSDL';
 
     /**
      * @var array $classmap The defined classes
@@ -40,11 +41,21 @@ class SuperEDIXWebService extends \SoapClient
       'StringArray' => 'NemEDI\\StringArray',
     );
 
+	public static function Create()
+	{
+		return new self([
+			'trace'        => true,
+			'exceptions'   => true,
+			'soap_version' => SOAP_1_2,
+			'encoding'     => 'UTF-8'
+		]);
+	}
+
     /**
      * @param array $options A array of config values
      * @param string $wsdl The wsdl file to use
      */
-    public function __construct(array $options = array(), $wsdl = 'NemEDI.wsdl')
+    public function __construct(array $options = array(), $wsdl = self::WSDLUrl)
     {
       foreach (self::$classmap as $key => $value) {
         if (!isset($options['classmap'][$key])) {
