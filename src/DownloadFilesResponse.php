@@ -4,6 +4,8 @@ namespace NemEDI;
 
 class DownloadFilesResponse
 {
+	const	DownloadFilesResponse_OK		= 'OK';
+	const	DownloadFilesResponse_NoFiles	= 'No Files';
 
     /**
      * @var string $DownloadFilesResult
