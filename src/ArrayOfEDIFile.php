@@ -21,7 +21,14 @@ class ArrayOfEDIFile
      */
     public function getEDIFile()
     {
-      return $this->EDIFile;
+    	if (is_array($this->EDIFile))
+		{
+			return $this->EDIFile;
+		}
+		else
+		{
+			return [$this->EDIFile];
+		}
     }
 
     /**
