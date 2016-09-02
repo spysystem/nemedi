@@ -4,6 +4,7 @@ namespace NemEDI;
 
 class UploadFileResponse
 {
+	const	UploadFileResult_OK	= 'OK';
 
     /**
      * @var string $UploadFileResult
