@@ -49,7 +49,7 @@ class UploadFile
      * @param boolean $Process
      * @param boolean $Print
      */
-    public function __construct($f, $FileName, $CustomerNumber, $Password, $Recognize, $Process, $Print)
+    public function __construct($f, $FileName, $CustomerNumber, $Password, $Recognize = false, $Process = false, $Print = false)
     {
       $this->f = $f;
       $this->FileName = $FileName;
