@@ -11,13 +11,13 @@ class PropertyValue
     protected $Name = null;
 
     /**
-     * @var anyType $Value
+     * @var mixed $Value
      */
     protected $Value = null;
 
     /**
      * @param string $Name
-     * @param anyType $Value
+     * @param mixed $Value
      */
     public function __construct($Name, $Value)
     {
@@ -44,7 +44,7 @@ class PropertyValue
     }
 
     /**
-     * @return anyType
+     * @return mixed
      */
     public function getValue()
     {
@@ -52,7 +52,7 @@ class PropertyValue
     }
 
     /**
-     * @param anyType $Value
+     * @param mixed $Value
      * @return \NemEDI\PropertyValue
      */
     public function setValue($Value)

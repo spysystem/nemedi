@@ -2,35 +2,35 @@
 
 namespace NemEDI;
 
-class ArrayOfPropertyValue implements \ArrayAccess, \Iterator, \Countable
+class ArrayOfGuid implements \ArrayAccess, \Iterator, \Countable
 {
 
     /**
-     * @var PropertyValue[] $PropertyValue
+     * @var string[] $guid
      */
-    protected $PropertyValue = null;
+    protected $guid = null;
 
-    
+
     public function __construct()
     {
-    
+
     }
 
     /**
-     * @return PropertyValue[]
+     * @return string[]
      */
-    public function getPropertyValue()
+    public function getGuid()
     {
-      return $this->PropertyValue;
+      return $this->guid;
     }
 
     /**
-     * @param PropertyValue[] $PropertyValue
-     * @return \NemEDI\ArrayOfPropertyValue
+     * @param string[] $guid
+     * @return \NemEDI\ArrayOfGuid
      */
-    public function setPropertyValue(array $PropertyValue = null)
+    public function setGuid(array $guid = null)
     {
-      $this->PropertyValue = $PropertyValue;
+      $this->guid = $guid;
       return $this;
     }
 
@@ -42,33 +42,33 @@ class ArrayOfPropertyValue implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-      return isset($this->PropertyValue[$offset]);
+      return isset($this->guid[$offset]);
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset The offset to retrieve
-     * @return PropertyValue
+     * @return string
      */
     public function offsetGet($offset)
     {
-      return $this->PropertyValue[$offset];
+      return $this->guid[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
      * @param mixed $offset The offset to assign the value to
-     * @param PropertyValue $value The value to set
+     * @param string $value The value to set
      * @return void
      */
     public function offsetSet($offset, $value)
     {
       if (!isset($offset)) {
-        $this->PropertyValue[] = $value;
+        $this->guid[] = $value;
       } else {
-        $this->PropertyValue[$offset] = $value;
+        $this->guid[$offset] = $value;
       }
     }
 
@@ -80,17 +80,17 @@ class ArrayOfPropertyValue implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-      unset($this->PropertyValue[$offset]);
+      unset($this->guid[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return PropertyValue Return the current element
+     * @return string Return the current element
      */
     public function current()
     {
-      return current($this->PropertyValue);
+      return current($this->guid);
     }
 
     /**
@@ -101,7 +101,7 @@ class ArrayOfPropertyValue implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-      next($this->PropertyValue);
+      next($this->guid);
     }
 
     /**
@@ -111,7 +111,7 @@ class ArrayOfPropertyValue implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-      return key($this->PropertyValue);
+      return key($this->guid);
     }
 
     /**
@@ -132,17 +132,17 @@ class ArrayOfPropertyValue implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-      reset($this->PropertyValue);
+      reset($this->guid);
     }
 
     /**
      * Countable implementation
      *
-     * @return PropertyValue Return count of elements
+     * @return int Return count of elements
      */
     public function count()
     {
-      return count($this->PropertyValue);
+      return count($this->guid);
     }
 
 }

@@ -6,7 +6,7 @@ class Label
 {
 
     /**
-     * @var base64Binary $Content
+     * @var string $Content
      */
     protected $Content = null;
 
@@ -21,7 +21,7 @@ class Label
     protected $Properties = null;
 
     /**
-     * @param base64Binary $Content
+     * @param string $Content
      * @param int $Copies
      * @param ArrayOfPropertyValue $Properties
      */
@@ -33,7 +33,7 @@ class Label
     }
 
     /**
-     * @return base64Binary
+     * @return string
      */
     public function getContent()
     {
@@ -41,7 +41,7 @@ class Label
     }
 
     /**
-     * @param base64Binary $Content
+     * @param string $Content
      * @return \NemEDI\Label
      */
     public function setContent($Content)

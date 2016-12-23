@@ -11,13 +11,13 @@ class EDIFile
     protected $FileName = null;
 
     /**
-     * @var base64Binary $FileContect
+     * @var string $FileContect
      */
     protected $FileContect = null;
 
     /**
      * @param string $FileName
-     * @param base64Binary $FileContect
+     * @param string $FileContect
      */
     public function __construct($FileName, $FileContect)
     {
@@ -44,7 +44,7 @@ class EDIFile
     }
 
     /**
-     * @return base64Binary
+     * @return string
      */
     public function getFileContect()
     {
@@ -52,7 +52,7 @@ class EDIFile
     }
 
     /**
-     * @param base64Binary $FileContect
+     * @param string $FileContect
      * @return \NemEDI\EDIFile
      */
     public function setFileContect($FileContect)

@@ -6,7 +6,7 @@ class UploadFile
 {
 
     /**
-     * @var base64Binary $f
+     * @var string $f
      */
     protected $f = null;
 
@@ -41,7 +41,7 @@ class UploadFile
     protected $Print = null;
 
     /**
-     * @param base64Binary $f
+     * @param string $f
      * @param string $FileName
      * @param int $CustomerNumber
      * @param string $Password
@@ -61,7 +61,7 @@ class UploadFile
     }
 
     /**
-     * @return base64Binary
+     * @return string
      */
     public function getF()
     {
@@ -69,7 +69,7 @@ class UploadFile
     }
 
     /**
-     * @param base64Binary $f
+     * @param string $f
      * @return \NemEDI\UploadFile
      */
     public function setF($f)
