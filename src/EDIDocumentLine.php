@@ -10,12 +10,10 @@ class EDIDocumentLine
      */
     protected $Properties = null;
 
-    /**
-     * @param ArrayOfPropertyValue $Properties
-     */
-    public function __construct($Properties)
+    
+    public function __construct()
     {
-      $this->Properties = $Properties;
+    
     }
 
     /**

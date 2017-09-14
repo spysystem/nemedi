@@ -4,6 +4,8 @@ namespace NemEDI;
 
 class SearchDocumentResponse
 {
+	const	ListNewFilesResponse_OK				= 'OK';
+	const	ListNewFilesResponse_NoDocuments	= 'No Documents';
 
     /**
      * @var string $SearchDocumentResult

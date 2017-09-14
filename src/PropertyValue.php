@@ -15,14 +15,10 @@ class PropertyValue
      */
     protected $Value = null;
 
-    /**
-     * @param string $Name
-     * @param mixed $Value
-     */
-    public function __construct($Name, $Value)
+
+    public function __construct()
     {
-      $this->Name = $Name;
-      $this->Value = $Value;
+
     }
 
     /**

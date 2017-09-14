@@ -21,15 +21,11 @@ class Label
     protected $Properties = null;
 
     /**
-     * @param string $Content
      * @param int $Copies
-     * @param ArrayOfPropertyValue $Properties
      */
-    public function __construct($Content, $Copies, $Properties)
+    public function __construct($Copies)
     {
-      $this->Content = $Content;
       $this->Copies = $Copies;
-      $this->Properties = $Properties;
     }
 
     /**

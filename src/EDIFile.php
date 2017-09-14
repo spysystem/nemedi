@@ -15,14 +15,10 @@ class EDIFile
      */
     protected $FileContect = null;
 
-    /**
-     * @param string $FileName
-     * @param string $FileContect
-     */
-    public function __construct($FileName, $FileContect)
+
+    public function __construct()
     {
-      $this->FileName = $FileName;
-      $this->FileContect = $FileContect;
+
     }
 
     /**

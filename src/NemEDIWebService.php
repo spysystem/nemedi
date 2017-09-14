@@ -50,6 +50,8 @@ class NemEDIWebService extends \SoapClient
   'ArrayOfEDIDocumentLine' => 'NemEDI\\ArrayOfEDIDocumentLine',
   'EDIDocumentLine' => 'NemEDI\\EDIDocumentLine',
   'AddDocumentResponse' => 'NemEDI\\AddDocumentResponse',
+  'ExecuteProcess' => 'NemEDI\\ExecuteProcess',
+  'ExecuteProcessResponse' => 'NemEDI\\ExecuteProcessResponse',
   'StringArray' => 'NemEDI\\StringArray',
 );
 
@@ -217,6 +219,15 @@ class NemEDIWebService extends \SoapClient
     public function AddDocument(AddDocument $parameters)
     {
       return $this->__soapCall('AddDocument', array($parameters));
+    }
+
+    /**
+     * @param ExecuteProcess $parameters
+     * @return ExecuteProcessResponse
+     */
+    public function ExecuteProcess(ExecuteProcess $parameters)
+    {
+      return $this->__soapCall('ExecuteProcess', array($parameters));
     }
 
 }

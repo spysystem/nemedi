@@ -26,6 +26,10 @@ class DocumentTypes
     const IFTMINLine = 'IFTMINLine';
     const RECADV = 'RECADV';
     const RECADVLine = 'RECADVLine';
+    const TAXCON = 'TAXCON';
+    const TAXCONLine = 'TAXCONLine';
+    const MESSAG = 'MESSAG';
+    const MESSAGLine = 'MESSAGLine';
     const ACKNOWLEDGE = 'ACKNOWLEDGE';
 
 

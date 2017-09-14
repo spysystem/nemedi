@@ -22,14 +22,10 @@ class EDIDocument
 
     /**
      * @param DocumentTypes $Documenttype
-     * @param ArrayOfPropertyValue $Properties
-     * @param ArrayOfEDIDocumentLine $Lines
      */
-    public function __construct($Documenttype, $Properties, $Lines)
+    public function __construct($Documenttype)
     {
       $this->Documenttype = $Documenttype;
-      $this->Properties = $Properties;
-      $this->Lines = $Lines;
     }
 
     /**
