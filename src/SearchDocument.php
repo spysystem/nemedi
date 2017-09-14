@@ -4,6 +4,7 @@ namespace NemEDI;
 
 class SearchDocument
 {
+	const DefaultDocumentID	= '00000000-0000-0000-0000-000000000000';
 
     /**
      * @var string $DocumentID
