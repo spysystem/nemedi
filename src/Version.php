@@ -5,10 +5,10 @@ namespace NemEDI;
 class Version
 {
 
-    
-    public function __construct()
-    {
-    
-    }
+	
+	public function __construct()
+	{
+	
+	}
 
 }
